@@ -32,11 +32,10 @@ pose:
   orientation: {x: 1.000, y: 0.006, z: -0.009, w: 0.006}"
 
 
-rostopic pub -1 /franka_gripper/gripper_action/goal \
-franka_gripper/GripperCommandActionGoal "goal:
-  command:
-    position: 0.04
-    max_effort: 40.0"
+rostopic pub -1 /franka_gripper/move/goal franka_gripper/MoveActionGoal \
+"goal:
+  width: 0.04
+  speed: 0.10"
 
 ```
 
