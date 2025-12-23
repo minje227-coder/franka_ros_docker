@@ -28,6 +28,14 @@ rostopic pub -1 /cartesian_impedance_example_controller/equilibrium_pose geometr
 pose:
   position: {x: 0.308, y: 0.002, z: 0.479}
   orientation: {x: 1.000, y: 0.006, z: -0.009, w: 0.006}"
+
+
+rostopic pub -1 /franka_gripper/gripper_action/goal \
+franka_gripper/GripperCommandActionGoal "goal:
+  command:
+    position: 0.04
+    max_effort: 40.0"
+
 ```
 
 For example, you can test the connection to the robot as follows:
