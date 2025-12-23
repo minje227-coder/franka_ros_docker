@@ -15,6 +15,8 @@ xhost +local:docker
 docker compose up
 # Open a new terminal window and run:
 docker attach <your-repo-name>-main-1
+
+docker start -ai franka_ros_docker-main-1
 ```
 where `<your-repo-name>` is the name that you choose for the new repository (i.e., the repository that uses this template).
 
