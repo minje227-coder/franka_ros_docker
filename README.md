@@ -20,6 +20,26 @@ where `<your-repo-name>` is the name that you choose for the new repository (i.e
 
 Now you should have access to the full Franka ROS interface documented [`here`](https://frankaemika.github.io/docs/franka_ros.html).
 
+```bash
+#joint move example
+rostopic pub \
+/cartesian_impedance_example_controller/equilibrium_pose \
+geometry_msgs/PoseStamped \
+-r 50 \
+"header:
+  frame_id: 'fr3_link0'
+pose:
+  position:
+    x: 0.45
+    y: 0.1
+    z: 0.35
+  orientation:
+    x: 0.0
+    y: 0.7071
+    z: 0.0
+    w: 0.7071"
+```
+
 For example, you can test the connection to the robot as follows:
 
 1. Go to the [Desk webapp](https://172.16.0.2/desk/) and login.
