@@ -11,6 +11,7 @@ docker compose build
 
 To run
 ```bash
+xhost +local:docker
 docker compose up
 # Open a new terminal window and run:
 docker attach <your-repo-name>-main-1
