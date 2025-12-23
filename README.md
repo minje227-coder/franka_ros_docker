@@ -22,22 +22,12 @@ Now you should have access to the full Franka ROS interface documented [`here`](
 
 ```bash
 #joint move example
-rostopic pub \
-/cartesian_impedance_example_controller/equilibrium_pose \
-geometry_msgs/PoseStamped \
--r 50 \
+rostopic pub -1 /cartesian_impedance_example_controller/equilibrium_pose geometry_msgs/PoseStamped \
 "header:
   frame_id: 'fr3_link0'
 pose:
-  position:
-    x: 0.45
-    y: 0.1
-    z: 0.35
-  orientation:
-    x: 0.0
-    y: 0.7071
-    z: 0.0
-    w: 0.7071"
+  position: {x: 0.308, y: 0.002, z: 0.479}
+  orientation: {x: 1.000, y: 0.006, z: -0.009, w: 0.006}"
 ```
 
 For example, you can test the connection to the robot as follows:
