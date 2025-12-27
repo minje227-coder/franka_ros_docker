@@ -17,6 +17,10 @@ docker compose up
 docker attach <your-repo-name>-main-1
 
 docker start -ai franka_ros_docker-main-1
+
+# 1. 현재 로드된 컨트롤러 목록 + 상태 확인
+rosservice call /controller_manager/list_controllers
+
 ```
 where `<your-repo-name>` is the name that you choose for the new repository (i.e., the repository that uses this template).
 
